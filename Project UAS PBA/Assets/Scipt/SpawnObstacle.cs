@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnObstacle : MonoBehaviour
 {
     public GameObject obstacle;
+    public GameObject spawnPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class SpawnObstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        transform.position = new Vector3(Random.Range(35.85f, 44.22f), 3.8f, 14.62f);
     }
     IEnumerator SpawnBatu() //Untuk menampilkan obstacle
 	{
