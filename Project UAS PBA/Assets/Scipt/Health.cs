@@ -16,6 +16,5 @@ public class Health : MonoBehaviour
     {
         fill.value = health;
     }
-
-   
+    
 }
