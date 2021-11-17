@@ -5,12 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-   public void TransitionToStageLevel(string sampleScene)
-    {
-        SceneManager.LoadScene(sampleScene);
-    }
+   
     public void ExitGame()
     {
         Application.Quit();
+        Debug.Log("Exit");
     }
 }

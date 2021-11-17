@@ -8,12 +8,24 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody player;
     public float speed = 7;
     public Transform Hadap;
+    public Health healthNow;
+    public int maxHealth = 100;
+    public int currentHealth;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = maxHealth;
+        healthNow.SetHealth(maxHealth);
     }
-
+    private void Update()
+    {
+        //jika player kena batu, maka darah berkurang
+    }
+    public void DamageForce(int damage)
+    {
+        currentHealth -= damage;
+        healthNow.SetHealth(currentHealth);
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
