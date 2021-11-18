@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody player;
-    public float speed = 7;
+    public float speed = 10f;
     public Transform Hadap;
     public Health healthNow;
     public int maxHealth = 100;
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
 	{
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-        player.position += Vector3.forward * moveVertical * 0.05f;
+        player.position += Vector3.forward * moveVertical * 0.5f;
         player.velocity = Vector3.right * moveHorizontal * speed;
         Hadap.localEulerAngles = new Vector3(0, moveHorizontal * 90, 0);
     }
