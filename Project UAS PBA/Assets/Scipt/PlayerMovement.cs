@@ -20,11 +20,14 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //jika player kena batu, maka darah berkurang
-
     }
-    
-	// Update is called once per frame
-	void FixedUpdate()
+    public void DamageForce(int damage)
+    {
+        currentHealth -= damage;
+        healthNow.SetHealth(currentHealth);
+    }
+    // Update is called once per frame
+    void FixedUpdate()
     {
         PlayerMove();
     }

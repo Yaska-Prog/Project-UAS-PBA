@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -392,8 +392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23d5c9dbb5286846a23f99d9ca648ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sphere: {fileID: 4047886743605455408, guid: 8636448e484c0af45bfaf805303fdb35, type: 3}
-  spawnPoint: {fileID: 904529503}
+  obstacle: {fileID: 4047886743605455408, guid: 8636448e484c0af45bfaf805303fdb35, type: 3}
+  spawnPoint: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 258, y: 0}
+  m_AnchoredPosition: {x: 6.700012, y: 0}
   m_SizeDelta: {x: -556, y: -168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978290502
@@ -558,11 +558,11 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 2071977868}
   m_HandleRect: {fileID: 0}
-  m_Direction: 1
+  m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 68
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -701,21 +701,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2675361429882964898, guid: da1203547328fdb41974e0b5334e799a, type: 3}
   m_PrefabInstance: {fileID: 253879573}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1362621851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362621845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2cd11cb86d0ba74fa33ceba134de3e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthNow: {fileID: 978290503}
-  currentHealth: 100
-  maxHealth: 100
 --- !u!1 &2065155059
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,15 +828,15 @@ RectTransform:
   m_GameObject: {fileID: 2071977867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 978290501}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.5, y: 49.456985}
-  m_SizeDelta: {x: -208.872, y: -142.1963}
+  m_AnchoredPosition: {x: -32.30423, y: 62.199997}
+  m_SizeDelta: {x: -62.5187, y: -91.224304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071977869
 MonoBehaviour:

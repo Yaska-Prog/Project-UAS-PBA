@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnObstacle : MonoBehaviour
 {
-    public GameObject Sphere;
+    public GameObject obstacle;
     public GameObject spawnPoint;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class SpawnObstacle : MonoBehaviour
     }
     IEnumerator SpawnBatu() //Untuk menampilkan obstacle
 	{
-        Instantiate(Sphere, transform.position, Quaternion.identity);
+        Instantiate(obstacle, transform.position, Quaternion.identity);
         yield return new WaitForSeconds(1);
         StartCoroutine(SpawnBatu());
 	}
