@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SpawnMortarC : MonoBehaviour
 {
-    public GameObject mortar, explode;
-    public Transform spawnPoint;
-    public int shootPower = 2000;
-    Rigidbody rb;
+    public float power = 5f;
+    public GameObject mortar, explosion;
+    //Rigidbody rb;
+    public Transform peluru;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,19 +18,23 @@ public class SpawnMortarC : MonoBehaviour
     {
 
         //waktu di kllik, mortar nembak peluru
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
-            //Instantiate(mortar, spawnPoint.position, Quaternion.identity);
+            //munculkan spawnBall di mortar 
+            GameObject spawnBall = Instantiate(mortar, peluru.position, peluru.rotation);
+            spawnBall.GetComponent<Rigidbody>().velocity = peluru.transform.up * power;
+
+            Destroy(Instantiate(explosion, peluru.position, peluru.rotation), 2);
         }
     }
-    IEnumerator SpawnMortarBall()
-    {
-        GameObject ammo = Instantiate(mortar, spawnPoint.position, Quaternion.identity);
-        ammo.GetComponent<Rigidbody>().AddForce(transform.up * shootPower * 2);
+    //IEnumerator SpawnMortarBall()
+    //{
+    //    GameObject ammo = Instantiate(mortar, spawnPoint.position, Quaternion.identity);
+    //    ammo.GetComponent<Rigidbody>().AddForce(transform.up * shootPower * 2);
 
-        yield return new WaitForSeconds(Random.Range(2, 5));
-        Destroy(ammo, 2);
-        Destroy(Instantiate(explode, spawnPoint.position, spawnPoint.rotation), -1);
-        StartCoroutine(SpawnMortarBall());
-    }
+    //    yield return new WaitForSeconds(Random.Range(2, 5));
+    //    Destroy(ammo, 2);
+    //    Destroy(Instantiate(explode, spawnPoint.position, spawnPoint.rotation), -1);
+    //    StartCoroutine(SpawnMortarBall());
+    //}
 }
