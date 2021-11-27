@@ -26,6 +26,7 @@ public class CollisionScript : MonoBehaviour
 			DamageForce(10);
 			Destroy(collision.collider.gameObject);
 		}
+
 	}
     public void DamageForce(int damage)
     {

@@ -6,7 +6,7 @@ public class SpawnCannonball : MonoBehaviour
 {
     public GameObject cannonballPrefab;
     public Transform spawnPoint;
-    public int shootPower = 5000;
+    public int shootPower = 100;
     public GameObject Explode;
     Rigidbody rb;
     // Start is called before the first frame update

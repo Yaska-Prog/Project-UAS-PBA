@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -668,7 +668,6 @@ GameObject:
   - component: {fileID: 210308688}
   - component: {fileID: 210308687}
   - component: {fileID: 210308685}
-  - component: {fileID: 210308690}
   - component: {fileID: 210308686}
   m_Layer: 0
   m_Name: Terrain Map
@@ -696,7 +695,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210308684}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 45067c44980993f4c96557e3bbaaa03a, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: af7312ffb38b4c64b846a53b785313e0, type: 2}
   m_EnableTreeColliders: 1
@@ -747,20 +746,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &210308690
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210308684}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!4 &230352566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010281450330, guid: 46b49871773764447a894bbb1c459502, type: 3}
@@ -10746,7 +10731,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1362621849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10760,7 +10745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthNow: {fileID: 978290503}
-  currentHealth: 0
+  currentHealth: 100
   maxHealth: 100
 --- !u!4 &1362621850 stripped
 Transform:
