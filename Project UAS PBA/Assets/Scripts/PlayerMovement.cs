@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Health healthNow;
     public int maxHealth = 100;
     public int currentHealth;
+    public Transform terrain;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //jika player kena batu, maka darah berkurang
+        Physics.IgnoreCollision(terrain.GetComponent<Collider>(), GetComponent<Collider>());
     }
     public void DamageForce(int damage)
     {
