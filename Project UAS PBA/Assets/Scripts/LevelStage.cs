@@ -7,6 +7,6 @@ public class LevelStage : MonoBehaviour
 {
     public void TransitionToStageLevel(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }
