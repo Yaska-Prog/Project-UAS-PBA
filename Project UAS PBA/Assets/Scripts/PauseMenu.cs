@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     public static bool isPaused;
     public GameObject pauseUI;
     public GameObject timerDisplay;
-    public int second = 300;
+    public int second = 180;
     public bool timerStart = false;
     // Start is called before the first frame update
     void Start()
