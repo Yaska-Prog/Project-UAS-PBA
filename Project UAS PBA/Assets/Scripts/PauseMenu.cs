@@ -42,10 +42,10 @@ public class PauseMenu : MonoBehaviour
 		}
         if (second <= 0)
 		{
-            SceneManager.LoadScene("Level2 Fix");
+            SceneManager.LoadScene("Level2");
 		}
     }
-    IEnumerator CountDownTimer()
+    IEnumerator CountDownTimer()    
 	{
         Text timer = timerDisplay.GetComponent<Text>();
         timerStart = true;
