@@ -126,3 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: 50
+  mortarAmmo: {fileID: 3375873255190670802, guid: 62ce99fc3d982f24aa1b71ce300d09c8, type: 3}
+  cannonAmmo: {fileID: 528290292634833755, guid: e0f8857ee11a8794ab41ba7e10fb76da, type: 3}

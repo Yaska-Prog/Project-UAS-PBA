@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnCoin : MonoBehaviour
 {
     public GameObject coin;
-    //public Transform spawnPoint;
+    
 
     public int power = 100;
     public float rotationSpeed = 100f;
@@ -29,7 +29,6 @@ public class SpawnCoin : MonoBehaviour
         //float idx = rd.Next(xPos.Length);
         //transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
         //transform.position = new Vector3(idx, 4.5f, 301.73f);
-
         //transform.Rotate(150, 0, 0);
     }
 

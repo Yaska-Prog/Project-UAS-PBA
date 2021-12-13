@@ -5,6 +5,9 @@ using UnityEngine;
 public class CoinRotation : MonoBehaviour
 {
     public int rotation;
+    public Transform mortarAmmo;
+    public Transform cannonAmmo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +18,7 @@ public class CoinRotation : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, 0, rotation);
+        Physics.IgnoreCollision(mortarAmmo.GetComponent<Collider>(), GetComponent<Collider>());
+        Physics.IgnoreCollision(cannonAmmo.GetComponent<Collider>(), GetComponent<Collider>());
     }
 }
